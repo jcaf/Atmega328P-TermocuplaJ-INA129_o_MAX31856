@@ -369,19 +369,23 @@ int main(void)
                 }
                 if (timer.min >= sram_param.Tminutes_max)
                 {
+                    RELAY2_ON();
+                    __delay_ms(1);
+                    //estabiliza el arco del relay,,no afecta el LCD
                     timer_1min_reset();
                     if (main_flag.process_disp_enable)
                     {
                         timer_display();
                         lcdan_set_cursor_in_row0(0x0D);
                         lcdan_print_PSTRstring(PSTR("ON "));
+                        //
                     }
                     //
                     #ifdef DEBUG_PROCESS
                     usart_print_PSTRstring(PSTR("Temp.Control\n"));
                     #endif
                     //PinTo0(PORTWxTIMER_ACTV, PINxTIMER_ACTV);
-                    RELAY2_ON();
+
                     main_flag.temp_control = 1;
                     //
                     PID_out_as_dutycycle = (uint8_t) PID_control(temper_actual);
@@ -520,7 +524,7 @@ void process_set_texts(void)
         //lcdan_print_PSTRstring(PSTR("t=   m Tctrl=OFF"));
         lcdan_print_PSTRstring(PSTR("t=   :  s TC=   "));
 
-        timer_display();
+        timer_display();//muestra la cuenta actual... no lo resetea
 
         //
         lcdan_set_cursor_in_row0(0x0D);
@@ -529,7 +533,7 @@ void process_set_texts(void)
         else
             lcdan_print_PSTRstring(PSTR("OFF"));
         //
-        timer_1min_reset();
+        //timer_1min_reset();   //cada procesa resetea el timer a su conveniencia
         timer_display();
         lcdan_set_cursor_in_row1(0x00);
         lcdan_print_PSTRstring(PSTR("Tp=   C Tsp=   C"));
@@ -553,6 +557,7 @@ void reset_all(void)
     PID_out_as_dutycycle = 0;
     PID_access_delay = 0;
     //
+    timer_1min_reset();//
     process_set_texts();
 
     RELAY1_OFF();
