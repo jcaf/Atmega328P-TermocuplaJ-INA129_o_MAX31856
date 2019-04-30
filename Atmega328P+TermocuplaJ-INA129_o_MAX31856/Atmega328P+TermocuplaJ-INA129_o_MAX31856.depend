@@ -1,0 +1,133 @@
+# depslib dependency file v1.0
+1556407293 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/main.c
+	"src/system.h"
+	"src/types.h"
+	"src/main.h"
+	"src/lcdan/lcdan.h"
+	"src/lcdan/lcdan_aux.h"
+	"src/ikey/ikey.h"
+	"src/ikey/kb.h"
+	"src/num/num_textedit.h"
+	"src/num/num_textedit_hwspecific.h"
+	"src/PID/PID.h"
+	"src/usart/usart.h"
+	"src/adc/adc.h"
+	"src/SPI/SPI.h"
+	"src/MAX31856/MAX31856.h"
+
+1547256329 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/system.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	<avr/pgmspace.h>
+	<avr/eeprom.h>
+	<util/delay.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+
+1533690810 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/types.h
+	<stdint-gcc.h>
+
+1556338759 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/main.h
+
+1554914557 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/lcdan/lcdan.h
+
+1556336504 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/lcdan/lcdan_aux.h
+	"lcdan.h"
+
+1554843154 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/ikey/ikey.h
+	"../types.h"
+
+1554843136 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/ikey/kb.h
+	"../types.h"
+	"ikey.h"
+
+1551312270 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/num/num_textedit.h
+
+1551312270 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/num/num_textedit_hwspecific.h
+
+1554928632 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/PID/PID.h
+
+1554929155 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/usart/usart.h
+
+1551312270 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/ikey/ikey.c
+	"../system.h"
+	"ikey.h"
+
+1556159578 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/ikey/kb.c
+	"../system.h"
+	"ikey.h"
+	"kb.h"
+
+1556080894 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/lcdan/lcdan.c
+	<avr/io.h>
+	<stdint.h>
+	"../system.h"
+	"lcdan.h"
+
+1554773256 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/lcdan/lcdan_aux.c
+	<avr/io.h>
+	<stdint.h>
+	"../system.h"
+	"lcdan.h"
+	"lcdan_aux.h"
+	<avr/pgmspace.h>
+
+1554905906 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/num/num_textedit.c
+	"../system.h"
+	"num_textedit.h"
+	<string.h>
+	"../str/str.h"
+
+1544139903 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/str/str.h
+
+1554905949 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/num/num_textedit_hwspecific.c
+	"../system.h"
+	"num_textedit_hwspecific.h"
+	"../lcdan/lcdan.h"
+	"../lcdan/lcdan_aux.h"
+	"../num/num_textedit.h"
+	"../ikey/ikey.h"
+	"../ikey/kb.h"
+	"system.h"
+	"num/num_textedit.h"
+	"num/num_textedit_hwspecific.h"
+	"lcdan/lcdan.h"
+	"lcdan/lcdan_aux.h"
+	"ikey/ikey.h"
+	"ikey/kb.h"
+
+1556338731 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/PID/PID2.c
+	"../system.h"
+	"../main.h"
+	"../usart/usart.h"
+	"PID.h"
+
+1554906037 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/str/str.c
+	"../system.h"
+	"str.h"
+
+1556046340 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/usart/usart.c
+	"../system.h"
+	"usart.h"
+	<avr/pgmspace.h>
+
+1556055799 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/adc/adc.c
+	"../system.h"
+	"adc.h"
+
+1556055799 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/adc/adc.h
+
+1556329372 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/SPI/SPI.c
+	"../system.h"
+	"SPI.h"
+
+1556312328 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/SPI/SPI.h
+
+1556407259 source:/run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/MAX31856/MAX31856.c
+	"../system.h"
+	"MAX31856.h"
+	"../SPI/SPI.h"
+
+1556315002 /run/media/jcaf/pleasure/PROYECTOS/ATMEL/C/Atmega328P+TermocuplaJ-INA129_o_MAX31856/Atmega328P+TermocuplaJ-INA129_o_MAX31856/src/MAX31856/MAX31856.h
+
