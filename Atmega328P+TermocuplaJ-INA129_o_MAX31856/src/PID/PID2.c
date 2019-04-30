@@ -132,54 +132,6 @@ int16_t PID_control(int16_t pv)
 }
 
 /*****************************************************
-PID_control_output call from ISR (SOLID STATE RELAY: CYCLE TIME 2s)
-*****************************************************/
-/*
-#define PWM_BASETIME_COUNTER_MAX 1//xdirectamente cada 20ms
-#define PWM_PERIOD_COUNTER_MAX PID_CONTROL_OUTPUT_MAX //
-
-void PID_control_output(uint8_t pwm_dutycycle)
-{
-    static uint8_t pwm_dutycycle_counter;
-    static uint8_t pwm_period_counter;
-    static uint8_t pwm_onoff=1;
-
-    if (1)//(++pwm_basetime_counter >= PWM_BASETIME_COUNTER_MAX)
-    {
-        //pwm_basetime_counter= 0x00;
-        //Cada 20ms
-        if (pwm_onoff==1)
-        {
-            if (pwm_dutycycle>0)
-            {
-
-                RELAY2_ON();//PinTo1(PORTWxRELAY2, PINxRELAY2);
-                if (++pwm_dutycycle_counter >= pwm_dutycycle)//0--100
-                {
-                    pwm_dutycycle_counter = 0;
-                    //
-                    if (pwm_dutycycle < PWM_PERIOD_COUNTER_MAX)
-                        {
-                            RELAY2_OFF();//PinTo0(PORTWxRELAY2, PINxRELAY2);
-                        } //only if less than
-
-                    pwm_onoff = 0;
-                }
-            }
-            else
-                {
-                    RELAY2_OFF();//PinTo0(PORTWxRELAY2, PINxRELAY2);
-                }
-        }
-        if (++pwm_period_counter >= PWM_PERIOD_COUNTER_MAX)//PID_CONTROL_OUTPUT_MAX
-        {
-            pwm_period_counter = 0x00;
-            pwm_onoff = 1;//begin new period
-        }
-    }
-}
-*/
-/*****************************************************
 PID_control_output call from ISR (MECHANICAL STATE RELAY: CYCLE TIME 10s)
 *****************************************************/
 #define PWM_BASETIME_COUNTER_MAX 5//20ms * 5 100ms
@@ -201,14 +153,14 @@ void PID_control_output(uint8_t pwm_dutycycle)
             if (pwm_dutycycle>0)
             {
 
-                RELAY2_ON();//PinTo1(PORTWxRELAY2, PINxRELAY2);
+                RELAY1_ON();//PinTo1(PORTWxRELAY1 PINxRELAY1;
                 if (++pwm_dutycycle_counter >= pwm_dutycycle)//0--100
                 {
                     pwm_dutycycle_counter = 0;
                     //
                     if (pwm_dutycycle < PWM_PERIOD_COUNTER_MAX)
                         {
-                            RELAY2_OFF();//PinTo0(PORTWxRELAY2, PINxRELAY2);
+                            RELAY1_OFF();//PinTo0(PORTWxRELAY1 PINxRELAY1;
                         } //only if less than
 
                     pwm_onoff = 0;
@@ -216,7 +168,7 @@ void PID_control_output(uint8_t pwm_dutycycle)
             }
             else
                 {
-                    RELAY2_OFF();//PinTo0(PORTWxRELAY2, PINxRELAY2);
+                    RELAY1_OFF();//PinTo0(PORTWxRELAY1 PINxRELAY1;
                 }
         }
         if (++pwm_period_counter >= PWM_PERIOD_COUNTER_MAX)//PID_CONTROL_OUTPUT_MAX

@@ -381,7 +381,7 @@ int main(void)
                     usart_print_PSTRstring(PSTR("Temp.Control\n"));
                     #endif
                     //PinTo0(PORTWxTIMER_ACTV, PINxTIMER_ACTV);
-                    RELAY1_ON();
+                    RELAY2_ON();
                     main_flag.temp_control = 1;
                     //
                     PID_out_as_dutycycle = (uint8_t) PID_control(temper_actual);

@@ -3241,7 +3241,7 @@ Disassembly of section .text:
     1a96:	51 f4       	brne	.+20     	; 0x1aac <PID_control_output+0x30>
     1a98:	88 23       	and	r24, r24
     1a9a:	c1 f0       	breq	.+48     	; 0x1acc <PID_control_output+0x50>
-    1a9c:	43 9a       	sbi	0x08, 3	; 8
+    1a9c:	42 9a       	sbi	0x08, 2	; 8
     1a9e:	90 91 38 01 	lds	r25, 0x0138	; 0x800138 <pwm_dutycycle_counter.2237>
     1aa2:	9f 5f       	subi	r25, 0xFF	; 255
     1aa4:	98 17       	cp	r25, r24
@@ -3256,10 +3256,10 @@ Disassembly of section .text:
     1abc:	10 92 38 01 	sts	0x0138, r1	; 0x800138 <pwm_dutycycle_counter.2237>
     1ac0:	84 36       	cpi	r24, 0x64	; 100
     1ac2:	08 f4       	brcc	.+2      	; 0x1ac6 <PID_control_output+0x4a>
-    1ac4:	43 98       	cbi	0x08, 3	; 8
+    1ac4:	42 98       	cbi	0x08, 2	; 8
     1ac6:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__data_start>
     1aca:	f0 cf       	rjmp	.-32     	; 0x1aac <PID_control_output+0x30>
-    1acc:	43 98       	cbi	0x08, 3	; 8
+    1acc:	42 98       	cbi	0x08, 2	; 8
     1ace:	ee cf       	rjmp	.-36     	; 0x1aac <PID_control_output+0x30>
     1ad0:	10 92 37 01 	sts	0x0137, r1	; 0x800137 <pwm_period_counter.2238>
     1ad4:	81 e0       	ldi	r24, 0x01	; 1
@@ -3528,7 +3528,7 @@ Disassembly of section .text:
     1d40:	84 eb       	ldi	r24, 0xB4	; 180
     1d42:	90 e0       	ldi	r25, 0x00	; 0
     1d44:	0e 94 d0 09 	call	0x13a0	; 0x13a0 <lcdan_print_PSTRstring>
-    1d48:	42 9a       	sbi	0x08, 2	; 8
+    1d48:	43 9a       	sbi	0x08, 3	; 8
     1d4a:	80 91 2d 01 	lds	r24, 0x012D	; 0x80012d <main_flag>
     1d4e:	80 61       	ori	r24, 0x10	; 16
     1d50:	80 93 2d 01 	sts	0x012D, r24	; 0x80012d <main_flag>
