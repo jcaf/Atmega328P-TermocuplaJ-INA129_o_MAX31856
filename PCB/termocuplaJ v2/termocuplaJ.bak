@@ -1305,6 +1305,6 @@ Text Notes 6900 5200 0    50   ~ 0
 para PMBT2222 invertir 2-3\n
 Text Notes 1200 7750 0    79   Italic 16
 C4,C5,C6 no ensamblados si se usa el INA/AD620
-Text Notes 3400 4550 0    79   ~ 0
-Falta div.tension en \nSDI, SCK y CS\n2.2k a gnd es suf.
+Text Notes 3400 4800 0    79   ~ 0
+Falta div.tension en \nSDI, SCK y CS\n2.2k a gnd es suf.\nSS le falta 1K en serie\npara completar el div.tension\n
 $EndSCHEMATC

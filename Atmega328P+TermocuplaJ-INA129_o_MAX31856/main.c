@@ -1,4 +1,15 @@
 /*
+ *
+ * SENSOR MAX31856
+ * Por el ensamblaje, en esta version de repite kte el envio de los textos al LCD
+ los arcos causados por la conmutacion de los relays afectan la visualiz. del LCD
+
+ * SENSOR: INA129
+ * Resistencia R8 entre pin 3 y +5v es de 100k... muy buenos resultados con el INA129
+ * La tarjeta basada en Arduino no necesita escribir constantemente los textos en el LCD.
+ * Tambien en la tarjeta con Arduino se invirtio la logica y las etiquetas q ya estaban designados las salidas de relay
+
+ *
    Author: Juan Carlos Aguero Flores, ][af.
    telf. 929 498 433
    email: firwar21@gmail.com
@@ -150,8 +161,8 @@ struct _timer
 #define TEMP_SENSOR_INA129 0
 #define TEMP_SENSOR_MAX31856 1
 
-#define TEMP_SENSOR TEMP_SENSOR_INA129
-//#define TEMP_SENSOR TEMP_SENSOR_MAX31856
+//#define TEMP_SENSOR TEMP_SENSOR_INA129
+#define TEMP_SENSOR TEMP_SENSOR_MAX31856
 
 //#define DEBUG_PROCESS //hasta habilitar 2 pines rx/tx -> a main.h
 void setup(void)

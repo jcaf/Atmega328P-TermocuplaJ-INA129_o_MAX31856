@@ -1307,4 +1307,6 @@ Text Notes 1200 7750 0    79   Italic 16
 C4,C5,C6 no ensamblados si se usa el INA/AD620
 Text Notes 3400 4800 0    79   ~ 0
 Falta div.tension en \nSDI, SCK y CS\n2.2k a gnd es suf.\nSS le falta 1K en serie\npara completar el div.tension\n
+Text Notes 4450 5800 0    79   Italic 16
+Se ensamblo finalmente con el INA129 y R8=100K\ncon muy buenos resultados
 $EndSCHEMATC
