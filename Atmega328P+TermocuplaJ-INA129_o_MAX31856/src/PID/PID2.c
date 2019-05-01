@@ -46,9 +46,9 @@ void PID_init(void)//cambiar de nombre
     // PID.K_derivative = 0;
 
      //for mechanical relay...OK
-    PID.K_proportional = 6;
-    PID.K_integral = 5.5;
-    PID.K_derivative = 0.5;
+    PID.K_proportional = 5;
+    PID.K_integral = 5;
+    PID.K_derivative = 3;
 }
 /*****************************************************
 *****************************************************/
@@ -75,7 +75,61 @@ int16_t PID_control(int16_t pv)
     usart_print_PSTRstring(PSTR("EIb:"));usart_println_string(str);
     #endif // PID_CONTROL_DEBUG
 
-    _pid_integral_windup =  10;//10;
+    //_pid_integral_windup =  10;//10;//10 era el valor optimizado??
+
+    if (error > 25)
+    {
+        _pid_integral_windup =  50;//70;//ok con etas ktes...
+    }
+    else if (error > 10)
+    {
+        if (pv > 80)
+        {
+            _pid_integral_windup =  10;
+        }
+        else if (pv > 60)
+        {__delay_us(50);//added for Relay arc
+            _pid_integral_windup =  5;
+        }
+        else if (pv > 40)
+        {
+            _pid_integral_windup =  3;
+        }
+        else if (pv > 20 )
+        {
+            _pid_integral_windup =  2;
+        }
+        else
+        {
+            _pid_integral_windup =  2;
+        }
+    }
+    else
+    {
+	if (pv > 80)
+        {
+            _pid_integral_windup =  1;
+        }
+        else if (pv > 60)
+        {
+            _pid_integral_windup =  1;
+        }
+        else if (pv > 40)
+        {
+            _pid_integral_windup =  1;
+        }
+        else if (pv > 20 )
+        {
+            _pid_integral_windup =  1;
+        }
+        else
+        {
+            _pid_integral_windup =  1;
+        }
+
+    }
+
+
     // if (error > 25)
     // {
     //     _pid_integral_windup =  90;//70;//ok con etas ktes...
@@ -154,6 +208,8 @@ void PID_control_output(uint8_t pwm_dutycycle)
             {
 
                 RELAY1_ON();//PinTo1(PORTWxRELAY1 PINxRELAY1;
+
+
                 if (++pwm_dutycycle_counter >= pwm_dutycycle)//0--100
                 {
                     pwm_dutycycle_counter = 0;

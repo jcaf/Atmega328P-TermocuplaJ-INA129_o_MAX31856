@@ -149,8 +149,9 @@ struct _timer
 
 #define TEMP_SENSOR_INA129 0
 #define TEMP_SENSOR_MAX31856 1
-//#define TEMP_SENSOR TEMP_SENSOR_INA129
-#define TEMP_SENSOR TEMP_SENSOR_MAX31856
+
+#define TEMP_SENSOR TEMP_SENSOR_INA129
+//#define TEMP_SENSOR TEMP_SENSOR_MAX31856
 
 //#define DEBUG_PROCESS //hasta habilitar 2 pines rx/tx -> a main.h
 void setup(void)
@@ -206,7 +207,6 @@ void setup(void)
 //    {;}
 //    temper_display(temper_actual);
 //    //
-
     PID_init();
     PID_set_setpoint(sram_param.Temp_sp);
 }
@@ -294,7 +294,8 @@ int main(void)
             {
                 if (main_flag.process_disp_enable)
                 {
-                    temper_display(temper_actual);
+                    //temper_display(temper_actual);
+                    process_set_texts();//reescribo todo el tema del arco producido por el relay
                 }
             }
             //
@@ -370,7 +371,7 @@ int main(void)
                 if (timer.min >= sram_param.Tminutes_max)
                 {
                     RELAY2_ON();
-                    __delay_ms(1);
+                    //__delay_ms(1);
                     //estabiliza el arco del relay,,no afecta el LCD
                     timer_1min_reset();
                     if (main_flag.process_disp_enable)
@@ -423,6 +424,8 @@ ISR(TIMER1_COMPA_vect)//cada 20ms
     if (main_flag.temp_control)
     {
         PID_control_output(PID_out_as_dutycycle);
+        //__delay_us(50);//added for Relay arc
+        //__delay_ms(1);
     }
 }
 

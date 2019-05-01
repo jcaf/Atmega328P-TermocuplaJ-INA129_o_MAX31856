@@ -300,8 +300,8 @@ uint8_t lcdan_test_busy(void)
     lcdan_set_datapins_outputs();
     return busy_addr;
 #else
-    //_delay_us(800);
-    __delay_ms(1.5);//garantiza +lcds
+    _delay_us(400);
+    //__delay_ms(1.5);//garantiza +lcds
     return 0;
 #endif
 

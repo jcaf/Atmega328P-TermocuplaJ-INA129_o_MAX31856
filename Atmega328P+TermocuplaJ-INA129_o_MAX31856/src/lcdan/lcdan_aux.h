@@ -11,10 +11,10 @@
 
 #define LCDAN_STR_MAXSIZE (LCD_COL+1)// 16/20 chars printable + '\0'
 
-#define lcdan_set_cursor_in_row0(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_0+x);__delay_us(100);}while(0)
-#define lcdan_set_cursor_in_row1(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_1+x);__delay_us(100);}while(0)
-#define lcdan_set_cursor_in_row2(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_2+x);__delay_us(100);}while(0)
-#define lcdan_set_cursor_in_row3(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_3+x);__delay_us(100);}while(0)
+#define lcdan_set_cursor_in_row0(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_0+x);__delay_us(10);}while(0)
+#define lcdan_set_cursor_in_row1(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_1+x);__delay_us(10);}while(0)
+#define lcdan_set_cursor_in_row2(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_2+x);__delay_us(10);}while(0)
+#define lcdan_set_cursor_in_row3(x) do{lcdan_write_cmd(LCDAN_BASEADDR_ROW_3+x);__delay_us(10);}while(0)
 
 #define lcdan_clear() do{lcdan_write_cmd(LCDAN_DISP_CLEAR);__delay_ms(2);}while(0)
 

@@ -80,7 +80,9 @@ uint8_t ADC_get_resultL(void)
 
 void ADC_init(int8_t mode)
 {
-	ADC_set_reference(ADC_REF_AREF);//Aref tied +VDD
+	//ADC_set_reference(ADC_REF_AREF);//Aref tied +VDD
+	ADC_set_reference(ADC_REF_AVCC);//
+
 	ADC_set_prescaler(ADC_PRESCALER_128);
 
 	//
